@@ -1,0 +1,219 @@
+/* Configuração geral do fundo da página */
+.layout-roleta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #1a1a24; /* Fundo escuro estilo premium */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, #044fda,  #0bcfbf,#044fda);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moverL 5s ease-in-out infinite;
+}
+
+@keyframes moverL {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Área que segura a roleta e a seta */
+.roleta-wrapper {
+  position: relative;
+  margin: 20px 0 30px 0;
+}
+
+/* A SETA VERMELHA - Centralizada exatamente no topo da roleta */
+.ponteiro {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 30px solid #ff3838; /* Cor vermelha viva */
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.6));
+}
+
+/* O Círculo da Roleta (Canvas) - Mantido original para PC */
+canvas {
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  border: 6px solid #333;
+  display: block;
+}
+
+/* Container dos botões de Girar e Reiniciar */
+.botoes-container {
+  display: flex;
+  gap: 15px; /* Espaço entre os dois botões */
+  margin-bottom: 20px;
+}
+
+/* Estilo do Botão GIRAR */
+.botao-girar {
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #044fda, #0bcfbf);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(7, 81, 219, 0.4);
+  transition: transform 0.1s, box-shadow 0.2s, background 0.2s;
+}
+
+.botao-girar:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 89, 255, 0.4);
+}
+
+/* Estilo do Botão REINICIAR */
+.botao-reiniciar {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4b4b61;
+  color: #fff;
+  border: 2px solid #5d5d78;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+.botao-reiniciar:hover:not(:disabled) {
+  background-color: #5d5d78;
+  transform: scale(1.03);
+}
+
+/* Comportamento dos botões quando a roleta estiver girando (desativados) */
+.botao-girar:disabled, .botao-reiniciar:disabled {
+  background: #555;
+  color: #aaa;
+  border-color: #555;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* CAIXINHA DE RESULTADO (Aparece quando o time cai) */
+.resultado-box {
+  margin-top: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: surgir 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.resultado-box h2 {
+  font-size: 14px;
+  margin: 0;
+  color: #0852f0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resultado-box p {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão de Esconder o time dentro da caixinha */
+.botao-esconder {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #0073df;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 141, 197, 0.3);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.botao-esconder:hover {
+  background-color: #0c53d6;
+  transform: scale(1.02);
+}
+
+/* Animação suave para a caixinha de resultado surgir */
+@keyframes surgir {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   MÁGICA RESPONSIVA: TABLETS E CELULARES (Sem quebrar o PC)
+   ========================================================================== */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  /* Faz a roleta encolher proporcionalmente mantendo-se perfeitamente redonda */
+  canvas {
+    max-width: 80vw;
+    max-height: 45vh;
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .resultado-box {
+    padding: 15px 30px;
+    width: 85vw;
+    max-width: 450px;
+    box-sizing: border-box;
+  }
+
+  .resultado-box p {
+    font-size: 26px;
+    margin: 10px 0 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  canvas {
+    max-width: 85vw;
+    max-height: 38vh;
+  }
+
+  .botao-girar {
+    padding: 12px 30px;
+    font-size: 18px;
+  }
+
+  .botao-reiniciar {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
