@@ -1,74 +1,112 @@
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)
+````md
+# ⚽ Team Roulette - Roleta de Times
 
-# Getting Started with Create React App
+Uma aplicação web desenvolvida para sortear e classificar equipes de futebol de forma aleatória para partidas de FIFA. O projeto utiliza React para proporcionar uma interface dinâmica e interativa, tornando a escolha dos times mais divertida e prática.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 Badges
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)
 
+---
 
-## Available Scripts
+## 📖 Sobre o Projeto
 
-In the project directory, you can run:
+O Team Roulette é um projeto desenvolvido com React que permite realizar o sorteio de times de futebol para partidas de FIFA. A aplicação foi criada com o objetivo de praticar conceitos fundamentais do desenvolvimento Front-End, como componentes reutilizáveis, gerenciamento de estado e manipulação dinâmica da interface do usuário.
 
-### `npm start`
+Além de tornar a escolha dos times mais rápida, o projeto oferece uma experiência simples, intuitiva e divertida para jogar com amigos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Funcionalidades
 
-### `npm test`
+- Sorteio aleatório de times de futebol;
+- Interface dinâmica e responsiva;
+- Gerenciamento de estado utilizando React;
+- Componentes reutilizáveis;
+- Experiência interativa para partidas de FIFA;
+- Fácil personalização da lista de equipes disponíveis.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- JavaScript
+- HTML5
+- CSS3
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Estrutura do Projeto
 
-### `npm run eject`
+```bash
+Team-Roulette/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+│
+├── package.json
+└── README.md
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ▶️ Como Executar o Projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone este repositório:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/seu-usuario/team-roulette.git
+```
 
-## Learn More
+2. Acesse a pasta do projeto:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd team-roulette
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Instale as dependências:
 
-### Code Splitting
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Execute a aplicação:
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+5. Abra o navegador no endereço:
 
-### Making a Progressive Web App
+```bash
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🎯 Objetivos do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Este projeto foi desenvolvido para praticar e aprimorar conhecimentos em:
 
-### Deployment
+- Desenvolvimento de aplicações com React;
+- Criação de componentes reutilizáveis;
+- Gerenciamento de estado;
+- Manipulação do DOM de forma declarativa;
+- Desenvolvimento de interfaces modernas e responsivas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 👨‍💻 Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desenvolvido por João Pedro.
+````
+
