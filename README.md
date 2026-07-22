@@ -1,4 +1,3 @@
-````md
 # ⚽ Team Roulette - Roleta de Times
 
 Uma aplicação web desenvolvida para sortear e classificar equipes de futebol de forma aleatória para partidas de FIFA. O projeto utiliza React para proporcionar uma interface dinâmica e interativa, tornando a escolha dos times mais divertida e prática.
